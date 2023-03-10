@@ -1,0 +1,160 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div#container {
+  min-height: 100vh;
+  display: flex;
+  text-align: center;
+}
+
+p#login {
+  padding: 25px;
+  min-width: 300px;
+}
+
+section#left {
+  flex: 1;
+  /* flex-basis: 700px; */
+  /* width: 30%; */
+  flex-basis: 300px;
+  background: url(images/wes-hicks-Z8Vle4UednM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: 30%;
+  background-size: cover;
+}
+
+section#right {
+  /* width: 60%; */
+  flex: 2;
+  padding: 100px;
+}
+
+div#logo img {
+  width: 200px;
+  height: auto;
+}
+
+main {
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+}
+
+button {
+  background-color: #08d2ff;
+  height: 35px;
+  margin-top: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+select,
+input {
+  height: 35px;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  margin: 7px 0 7px 0;
+  padding-left: 10px;
+}
+
+input[type="text"] {
+  min-width: 200px;
+  display: block;
+  height: 30px;
+  appearance: none;
+}
+
+label {
+  /* border: 1px solid black; */
+  text-align: left;
+  color: gray;
+  font-size: 0.75rem;
+}
+
+form {
+  min-width: 250px;
+  max-width: 450px;
+  display: flex;
+  flex: 1;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+div#personal,
+div#business {
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  display: flex;
+  justify-content: column;
+  align-items: left;
+  align-content: left;
+  text-align: left;
+  height: 35px;
+  width: 48%;
+  background-color: white;
+}
+
+div#selectwrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px 0 7px 0;
+}
+
+select {
+  padding: 7px;
+  appearance: none;
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+}
+
+span {
+  padding-left: 15px;
+  padding-top: 6px;
+}
+
+input[type="radio"] {
+  display: inline;
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  align-self: center;
+  position: relative;
+  left: 8px;
+  accent-color: #2ec;
+}
+
+input[type="radio"]:checked {
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  background-color: #08d2ff;
+}
+
+input:focus {
+  border-color: #08d2ff;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+@media screen and (max-width: 900px) {
+  section#left {
+    display: none;
+  }
+}

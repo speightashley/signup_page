@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <section id="left"></section>
+      <section id="right">
+        <header>
+          <div id="logo">
+            <img src="images/TransferWise-Logo.png" alt="logo" />
+          </div>
+          <h1>Welcome to money without borders.</h1>
+          <p id="login">Already signed up? <a href="login.html">Log in</a></p>
+        </header>
+        <main>
+          <form action="post">
+            <fieldset>
+              <div id="selectwrapper">
+                <div id="personal">
+                  <input type="radio" name="type" id="personal" /><span
+                    >Personal</span
+                  >
+                </div>
+                <div id="business">
+                  <input type="radio" name="type" id="business" /><span
+                    >Business</span
+                  >
+                </div>
+              </div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email Address"
+              />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Create a password"
+              />
+              <label for="country">Country of residence</label>
+              <select name="country" id="country">
+                <optgroup label="EU">
+                  <option value="UK">UK</option>
+                  <option value="France">France</option>
+                </optgroup>
+              </select>
+              <button type="submit">Sign Up</button>
+              <p id="login">
+                Or continue with <a href="">Google </a>or
+                <a href="">Facebook</a>
+              </p>
+            </fieldset>
+          </form>
+        </main>
+      </section>
+    </div>
+  </body>
+</html>

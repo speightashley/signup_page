@@ -1,3 +1,12 @@
+/* Global Styles ---------------------------------------------------------------------------
+
+Put things in here that effect everything on the page:
+
+* Body - Fonts, background colours etc
+* Global containers
+
+--------------------------------------------------------------------------------------*/
+
 * {
   border: 0;
   margin: 0;
@@ -15,28 +24,43 @@ div#container {
   text-align: center;
 }
 
-p#login {
+p {
   padding: 25px;
   min-width: 300px;
 }
 
+/*
+Two distinct sections
+
+Left / Right
+
+Main is the content that belongs to the right section
+
+Section left is only visible on desktop and laptop devices: 
+
+Collapses at 900px or less screen size
+
+*/
+
 section#left {
   flex: 1;
-  /* flex-basis: 700px; */
-  /* width: 30%; */
   flex-basis: 300px;
   background: url(images/sean-pollock-PhYq704ffdA-unsplash.jpg);
   background-repeat: no-repeat;
-  background-position: 30%;
+  background-position: 35%;
   background-size: cover;
-  background-color: #08d2ff33;
-  background-blend-mode: overlay;
+  background-color: #cfe2e636;
+  background-blend-mode: color-burn;
 }
 
 section#right {
-  /* width: 60%; */
   flex: 2;
   padding: 100px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
 
 div#logo img {
@@ -44,10 +68,24 @@ div#logo img {
   height: auto;
 }
 
-main {
+/*
+Button, form and input styles
+
+Elements used: 
+
+Input[email/text/password], Select, Radio 
+*/
+form {
+  min-width: 150px;
+  max-width: 450px;
   display: flex;
-  /* text-align: center; */
-  justify-content: center;
+  flex: 1;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 button {
@@ -60,51 +98,53 @@ input[type="email"],
 input[type="password"],
 input[type="text"],
 select,
+div#personal,
+div#business,
 input {
   height: 35px;
   border: 1px solid rgba(128, 128, 128, 0.39);
   margin: 7px 0 7px 0;
   padding-left: 10px;
+  background-color: white;
 }
 
-input[type="text"] {
-  min-width: 200px;
-  display: block;
-  height: 30px;
+input[type="radio"] {
+  display: inline;
   appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  align-self: center;
+  position: relative;
+  left: 8px;
+  accent-color: #2ec;
+}
+
+input[type="radio"]:checked {
+  border: 3px solid rgba(128, 128, 128, 0.39);
+  background-color: #08d2ff;
+}
+
+input:focus {
+  border-color: #08d2ff;
+}
+
+input:invalid {
+  border-color: red;
 }
 
 label {
-  /* border: 1px solid black; */
   text-align: left;
   color: gray;
   font-size: 0.75rem;
 }
 
-form {
-  min-width: 250px;
-  max-width: 450px;
-  display: flex;
-  flex: 1;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
 div#personal,
 div#business {
-  border: 1px solid rgba(128, 128, 128, 0.39);
   display: flex;
   justify-content: column;
-  align-items: left;
-  align-content: left;
-  text-align: left;
-  height: 35px;
-  width: 48%;
-  background-color: white;
+  width: 46%;
 }
 
 div#selectwrapper {
@@ -127,32 +167,6 @@ select {
 span {
   padding-left: 15px;
   padding-top: 6px;
-}
-
-input[type="radio"] {
-  display: inline;
-  appearance: none;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(128, 128, 128, 0.39);
-  align-self: center;
-  position: relative;
-  left: 8px;
-  accent-color: #2ec;
-}
-
-input[type="radio"]:checked {
-  border: 1px solid rgba(128, 128, 128, 0.39);
-  background-color: #08d2ff;
-}
-
-input:focus {
-  border-color: #08d2ff;
-}
-
-input:invalid {
-  border-color: red;
 }
 
 @media screen and (max-width: 900px) {

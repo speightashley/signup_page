@@ -130,10 +130,12 @@ input:focus {
   border-color: #08d2ff;
 }
 
-input:invalid {
-  border-color: red;
+select:focus {
+  border: 3px solid #3584e4;
 }
-
+input:invalid {
+  border: 1px solid red;
+}
 label {
   text-align: left;
   color: gray;

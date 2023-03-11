@@ -25,10 +25,12 @@ section#left {
   /* flex-basis: 700px; */
   /* width: 30%; */
   flex-basis: 300px;
-  background: url(images/wes-hicks-Z8Vle4UednM-unsplash.jpg);
+  background: url(images/sean-pollock-PhYq704ffdA-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: 30%;
   background-size: cover;
+  background-color: #08d2ff33;
+  background-blend-mode: overlay;
 }
 
 section#right {
